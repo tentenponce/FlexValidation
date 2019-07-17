@@ -1,6 +1,6 @@
 package com.tcorner.flexvalidation
 
-class MinMaxValidation(private val min: Int, private val max: Int) : Validation() {
+class MinMaxValidation(val min: Int, val max: Int) : Validation() {
 
     override fun isValid(o: Any): Boolean {
         return when (o) {
