@@ -11,7 +11,7 @@ ext {
 
     publishedGroupId = "com.tcorner"
     artifact = "flexvalidation"
-    libraryVersion = "1.0.1"
+    libraryVersion = "1.0.2"
 
     libraryDescription = "Simple, flexible, and extensible form validations"
     siteUrl = "https://github.com/tentenponce/FlexValidation"
