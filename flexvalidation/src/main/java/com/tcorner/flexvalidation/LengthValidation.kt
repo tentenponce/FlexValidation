@@ -1,13 +1,10 @@
-package com.ubx.validation
+package com.tcorner.flexvalidation
 
-import com.tcorner.flexvalidation.Validation
-
-class LengthValidation(val mMin: Int) : Validation() {
-
+class LengthValidation(val min: Int) : Validation() {
     override fun isValid(o: Any): Boolean {
-        return if (o is String) {
-
-            o.length == mMin
-        } else false
+        return when (o) {
+            is String -> o.length == min
+            else -> false
+        }
     }
 }
