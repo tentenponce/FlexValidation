@@ -1,5 +1,8 @@
 package com.tcorner.flexvalidation
 
+/**
+ * Allows alphabet AND numeric only.
+ */
 class AlphaNumericValidation : Validation() {
 
     override fun isValid(o: Any): Boolean {
