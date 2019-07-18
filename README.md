@@ -48,7 +48,7 @@ Validator.validate(
     UpperCaseValidation(),
     NumberValidation()
   )
-)
+) // returns the first validation object that fails
 ```
 
 **Java**
@@ -63,7 +63,7 @@ Validator.INSTANCE.validate(
     new UpperCaseValidation(),
    new NumberValidation()
   }
-);
+); // returns the first validation object that fails
 ```
 
 ### Author
