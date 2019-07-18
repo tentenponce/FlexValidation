@@ -21,7 +21,7 @@ dependencies {
 }
 ```
 
-Simply use the validation you want:
+### Simply use the validation you want:
 
 **Kotlin**
 ```
@@ -34,7 +34,7 @@ new AlphabetValidation().isValid("abc"); // returns true
 new AlphabetValidation().isValid("abc123"); // returns false
 ```
 
-You can also combine multiple validations:
+### You can also combine multiple validations:
 
 **Kotlin**
 ```
