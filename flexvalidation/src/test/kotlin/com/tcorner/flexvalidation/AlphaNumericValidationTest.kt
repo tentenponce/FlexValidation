@@ -12,13 +12,13 @@ class AlphaNumericValidationTest {
     }
 
     @Test
-    fun `should return false if it contains alphabet only`() {
-        assert(!validation.isValid("abc"))
+    fun `should return true if it contains alphabet only`() {
+        assert(validation.isValid("abc"))
     }
 
     @Test
-    fun `should return false if it contains numeric only`() {
-        assert(!validation.isValid("123"))
+    fun `should return true if it contains numeric only`() {
+        assert(validation.isValid("123"))
     }
 
     @Test

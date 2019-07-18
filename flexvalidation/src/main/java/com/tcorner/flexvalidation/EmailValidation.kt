@@ -2,6 +2,9 @@ package com.tcorner.flexvalidation
 
 import java.util.regex.Pattern
 
+/**
+ * returns true if email is valid, false otherwise.
+ */
 class EmailValidation : Validation() {
 
     companion object {
@@ -13,6 +16,5 @@ class EmailValidation : Validation() {
         return if (o is String) {
             EMAIL_PATTERN.matcher(o).find()
         } else false
-
     }
 }

@@ -3,6 +3,8 @@ package com.tcorner.flexvalidation
 /**
  * Allows alphabet characters only.
  *
+ * Example:
+ *
  * "abc" is true
  * "abc123" is false
  */
