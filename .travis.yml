@@ -1,10 +1,29 @@
 language: java
-jdk:
-  - oraclejdk8
+jdk: oraclejdk8
+
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+  directories:      #Cache all dirs under .gradle folder
+    - $HOME/.gradle/daemon      #Cache daemon logs
+    - $HOME/.gradle/native      #Cache library downloaded from the gradle dependency
+    - $HOME/.gradle/wrapper     #Cache the gradle
+
 before_script:
   - chmod +x gradlew
+
 script:
   - ./gradlew check
   - ./gradlew jacocoTestReport
+
+deploy:
+  provider: script
+  script: ./gradlew bintrayUpload
+  skip_cleanup: true
+  dry-run: false
+  on:
+    branch: master
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
