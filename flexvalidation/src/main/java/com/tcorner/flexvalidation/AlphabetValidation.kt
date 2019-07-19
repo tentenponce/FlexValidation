@@ -16,7 +16,7 @@ import java.util.regex.Pattern
 class AlphabetValidation : Validation() {
 
     companion object {
-        val ALPHABET_VALIDATION: Pattern = Pattern.compile("[A-Za-z]")
+        private val ALPHABET_VALIDATION: Pattern = Pattern.compile("[A-Za-z]")
     }
 
     override fun isValid(o: Any): Boolean {

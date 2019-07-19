@@ -1,5 +1,7 @@
 package com.tcorner.flexvalidation
 
+import java.util.regex.Pattern
+
 /**
  * Allows alphabet OR numeric only.
  *
@@ -12,7 +14,14 @@ package com.tcorner.flexvalidation
  */
 class AlphaNumericValidation : Validation() {
 
+    companion object {
+        private val ALPHANUMERIC_VALIDATION: Pattern = Pattern.compile("^[a-zA-Z0-9_\\s]*\$")
+    }
+
     override fun isValid(o: Any): Boolean {
-        return (o as? String)?.matches("^[a-zA-Z0-9_\\s]*$".toRegex()) ?: false
+        return when(o) {
+            is String -> o.matches(ALPHANUMERIC_VALIDATION.toRegex())
+            else -> false
+        }
     }
 }

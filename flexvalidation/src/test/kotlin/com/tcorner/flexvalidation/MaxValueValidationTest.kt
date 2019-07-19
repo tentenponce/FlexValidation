@@ -9,18 +9,21 @@ class MaxValueValidationTest {
     @Test
     fun `should return true if less than the given maximum`() {
         assert(validation.isValid(9))
+        assert(validation.isValid(9.0))
         assert(validation.isValid("9"))
     }
 
     @Test
     fun `should return true if equal the given maximum`() {
         assert(validation.isValid(10))
+        assert(validation.isValid(10.0))
         assert(validation.isValid("10"))
     }
 
     @Test
     fun `should return false if greater than the given maximum`() {
         assert(!validation.isValid(11))
+        assert(!validation.isValid(11.0))
         assert(!validation.isValid("11"))
     }
 

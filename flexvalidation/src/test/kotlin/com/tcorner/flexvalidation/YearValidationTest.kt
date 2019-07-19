@@ -13,6 +13,12 @@ class YearValidationTest {
     }
 
     @Test
+    fun `should return false if length is not 4`() {
+        assert(!validation.isValid("200"))
+        assert(!validation.isValid(200))
+    }
+
+    @Test
     fun `should return false if contains not number`() {
         assert(!validation.isValid("200A"))
     }
