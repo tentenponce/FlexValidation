@@ -1,5 +1,7 @@
 package com.tcorner.flexvalidation
 
+import java.util.regex.Pattern
+
 /**
  * validates if number is a valid year, validates only
  * by its length and characters
@@ -10,11 +12,15 @@ package com.tcorner.flexvalidation
  */
 class YearValidation : Validation() {
 
+    companion object {
+        private val YEAR_VALIDATION: Pattern = Pattern.compile("^\\d{1,10}\$")
+    }
+
     @Suppress("MagicNumber")
     override fun isValid(o: Any): Boolean {
         return when (o) {
-            is String -> o.matches("^\\d{1,10}$".toRegex()) && o.length == 4
-            is Int -> o.toString().matches("^\\d{1,10}$".toRegex()) && o.toString().length == 4
+            is String -> o.matches(YEAR_VALIDATION.toRegex()) && o.length == 4
+            is Int -> o.toString().matches(YEAR_VALIDATION.toRegex()) && o.toString().length == 4
             else -> false
         }
     }
