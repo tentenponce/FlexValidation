@@ -1,4 +1,9 @@
 # FlexValidation
+
+[![codecov](https://codecov.io/gh/tentenponce/FlexValidation/branch/master/graph/badge.svg)](https://codecov.io/gh/tentenponce/FlexValidation)
+[![Build Status](https://travis-ci.org/tentenponce/FlexValidation.svg?branch=master)](https://travis-ci.org/tentenponce/FlexValidation)
+[ ![Download](https://api.bintray.com/packages/tentenponce/FlexValidation/com.tcorner.flexvalidation/images/download.svg) ](https://bintray.com/tentenponce/FlexValidation/com.tcorner.flexvalidation/_latestVersion)
+
 Simple, flexible, and highly extensible form validations.
 
 ### Why use this?
@@ -17,7 +22,7 @@ android {
 
 dependencies {
   ...
-  implementation "com.tcorner:flexvalidation:1.0.2"
+  implementation "com.tcorner:flexvalidation:<latest version here>"
 }
 ```
 
