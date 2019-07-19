@@ -8,7 +8,7 @@ import java.util.regex.Pattern
 class UpperCaseValidation : Validation() {
 
     companion object {
-        val UPPER_CASE_VALIDATION: Pattern = Pattern.compile("[A-Z ]")
+        private val UPPER_CASE_VALIDATION: Pattern = Pattern.compile("[A-Z ]")
     }
 
     override fun isValid(o: Any): Boolean {
