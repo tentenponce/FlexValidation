@@ -19,6 +19,9 @@ class AlphaNumericValidation : Validation() {
     }
 
     override fun isValid(o: Any): Boolean {
-        return (o as? String)?.matches(ALPHANUMERIC_VALIDATION.toRegex()) ?: false
+        return when(o) {
+            is String -> o.matches(ALPHANUMERIC_VALIDATION.toRegex())
+            else -> false
+        }
     }
 }
