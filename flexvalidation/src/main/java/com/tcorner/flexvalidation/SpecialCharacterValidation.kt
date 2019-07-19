@@ -2,6 +2,9 @@ package com.tcorner.flexvalidation
 
 import java.util.regex.Pattern
 
+/**
+ * Returns true if string contains atleast 1 special character
+ */
 class SpecialCharacterValidation : Validation() {
 
     companion object {

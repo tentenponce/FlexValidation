@@ -2,10 +2,22 @@ package com.tcorner.flexvalidation
 
 import java.util.Calendar
 
-class DateValidation(private val mFromDate: Calendar) : Validation() {
+/**
+ * Compare first date (constructor parameter) should be less than
+ * the second date (isValid function parameter).
+ *
+ * Example:
+ *
+ * given format is yyyy-MM-dd
+ * given first date is "2019-01-01"
+ * given second date is "2019-01-02"
+ *
+ * The result will be true because first date is behind second date
+ */
+class DateValidation(val firstDate: Calendar) : Validation() {
 
     override fun isValid(o: Any): Boolean {
-        val toDate = o as Calendar
-        return mFromDate.time.before(toDate.time)
+        val secondDate = o as Calendar
+        return firstDate.time.before(secondDate.time)
     }
 }

@@ -2,6 +2,9 @@ package com.tcorner.flexvalidation
 
 import java.util.regex.Pattern
 
+/**
+ * returns true if string has atleast 1 lowercase character.
+ */
 class LowerCaseValidation : Validation() {
 
     companion object {

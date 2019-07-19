@@ -1,7 +1,14 @@
 package com.tcorner.flexvalidation
 
 /**
- * Allows alphabet AND numeric only.
+ * Allows alphabet OR numeric only.
+ *
+ * Example:
+ *
+ * "abc123" is true
+ * "abc" is true
+ * "123" is true
+ * "abc123!@#$" is false
  */
 class AlphaNumericValidation : Validation() {
 
