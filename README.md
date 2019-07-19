@@ -34,6 +34,26 @@ new AlphabetValidation().isValid("abc"); // returns true
 new AlphabetValidation().isValid("abc123"); // returns false
 ```
 
+### Create your own validation!
+
+**Kotlin**
+```
+class YourValidation: Validation() {
+  override fun isValid(o: Any): Boolean {
+    // your logic here, check first for data type of parameter o
+  }
+}
+```
+**Java**
+```
+public class YourValidation extends Validation {
+  @Override
+  public boolean isValid(Object o) {
+    // your logic here, check first for data type of parameter o 
+  }
+}
+```
+
 ### You can also combine multiple validations:
 
 **Kotlin**
