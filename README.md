@@ -7,6 +7,7 @@ Simple, flexible, and highly extensible form validations.
 - Just exactly what you need, pure validation classes only.
 - Less than 25KB!!!
 
+---
 ### How to use
 
 Add this on the `dependencies` block of your app level `build.gradle`.
@@ -21,6 +22,7 @@ dependencies {
 }
 ```
 
+---
 ### Simply use the validation you want:
 
 **Kotlin**
@@ -34,6 +36,7 @@ new AlphabetValidation().isValid("abc"); // returns true
 new AlphabetValidation().isValid("abc123"); // returns false
 ```
 
+---
 ### Create your own validation!
 
 **Kotlin**
@@ -54,6 +57,7 @@ public class YourValidation extends Validation {
 }
 ```
 
+---
 ### You can also combine multiple validations:
 
 **Kotlin**
