@@ -14,13 +14,14 @@ class YearValidation : Validation() {
 
     companion object {
         private val YEAR_VALIDATION: Pattern = Pattern.compile("^\\d{1,10}\$")
+        private const val YEAR_LENGTH = 4
     }
 
     @Suppress("MagicNumber")
     override fun isValid(o: Any): Boolean {
         return when (o) {
-            is String -> o.matches(YEAR_VALIDATION.toRegex()) && o.length == 4
-            is Int -> o.toString().matches(YEAR_VALIDATION.toRegex()) && o.toString().length == 4
+            is String -> o.matches(YEAR_VALIDATION.toRegex()) && o.length == YEAR_LENGTH
+            is Int -> o.toString().matches(YEAR_VALIDATION.toRegex()) && o.toString().length == YEAR_LENGTH
             else -> false
         }
     }
