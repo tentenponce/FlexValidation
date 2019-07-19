@@ -25,4 +25,9 @@ class AlphaNumericValidationTest {
     fun `should return false if it contains special characters`() {
         assert(!validation.isValid("abc123!@#$%"))
     }
+
+    @Test
+    fun `should return false if data type not supported`() {
+        assert(!validation.isValid(1234567))
+    }
 }
