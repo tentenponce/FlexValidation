@@ -20,4 +20,9 @@ class LowerCaseValidationTest {
     fun `should return false if there's no lowercase characters`() {
         assert(!validation.isValid("ABCDEFG"))
     }
+
+    @Test
+    fun `should return false if data type not supported`() {
+        assert(!validation.isValid(12345678))
+    }
 }

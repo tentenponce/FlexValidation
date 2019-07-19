@@ -24,4 +24,9 @@ class EmailValidationTest {
         assert(!validation.isValid("test@gmail"))
         assert(!validation.isValid("test@ubx"))
     }
+
+    @Test
+    fun `should return false if data type not supported`() {
+        assert(!validation.isValid(1234567890))
+    }
 }

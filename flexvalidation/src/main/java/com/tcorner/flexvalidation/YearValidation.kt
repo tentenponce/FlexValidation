@@ -1,5 +1,13 @@
 package com.tcorner.flexvalidation
 
+/**
+ * validates if number is a valid year, validates only
+ * by its length and characters
+ *
+ * 2000 is true
+ * 200 is false
+ * 200A is false
+ */
 class YearValidation : Validation() {
 
     @Suppress("MagicNumber")

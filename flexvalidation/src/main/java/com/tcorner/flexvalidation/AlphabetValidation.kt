@@ -1,16 +1,28 @@
 package com.tcorner.flexvalidation
 
+import java.util.regex.Pattern
+
 /**
- * Allows alphabet characters only.
+ * Returns true if string contains atleast 1 alphabet.
  *
  * Example:
  *
  * "abc" is true
- * "abc123" is false
+ * "abc123" is true
+ * "abc!@#" is true
+ * "123" is false
+ * "!@#$" is false
  */
 class AlphabetValidation : Validation() {
 
+    companion object {
+        val ALPHABET_VALIDATION: Pattern = Pattern.compile("[A-Za-z]")
+    }
+
     override fun isValid(o: Any): Boolean {
-        return (o as? String)?.matches("^[A-z\\s]+$".toRegex()) ?: false
+        return when (o) {
+            is String -> ALPHABET_VALIDATION.matcher(o).find()
+            else -> false
+        }
     }
 }

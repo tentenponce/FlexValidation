@@ -14,7 +14,7 @@ import java.util.Calendar
  *
  * The result will be true because first date is behind second date
  */
-class DateValidation(private val firstDate: Calendar) : Validation() {
+class DateValidation(val firstDate: Calendar) : Validation() {
 
     override fun isValid(o: Any): Boolean {
         val secondDate = o as Calendar

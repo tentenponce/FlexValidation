@@ -2,6 +2,9 @@ package com.tcorner.flexvalidation
 
 import java.util.regex.Pattern
 
+/**
+ * Returns true if string contains atleast 1 upper case
+ */
 class UpperCaseValidation : Validation() {
 
     companion object {
