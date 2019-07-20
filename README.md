@@ -1,4 +1,9 @@
 # FlexValidation
+
+[![codecov](https://codecov.io/gh/tentenponce/FlexValidation/branch/master/graph/badge.svg)](https://codecov.io/gh/tentenponce/FlexValidation)
+[![Build Status](https://travis-ci.org/tentenponce/FlexValidation.svg?branch=master)](https://travis-ci.org/tentenponce/FlexValidation)
+[ ![Download](https://api.bintray.com/packages/tentenponce/FlexValidation/com.tcorner.flexvalidation/images/download.svg) ](https://bintray.com/tentenponce/FlexValidation/com.tcorner.flexvalidation/_latestVersion)
+
 Simple, flexible, and highly extensible form validations.
 
 ### Why use this?
@@ -6,7 +11,9 @@ Simple, flexible, and highly extensible form validations.
 - Highly extensible, create your own validations!
 - Just exactly what you need, pure validation classes only.
 - Less than 25KB!!!
+- Complete documentation and tests.
 
+---
 ### How to use
 
 Add this on the `dependencies` block of your app level `build.gradle`.
@@ -17,10 +24,11 @@ android {
 
 dependencies {
   ...
-  implementation "com.tcorner:flexvalidation:1.0.2"
+  implementation "com.tcorner:flexvalidation:<latest version here>"
 }
 ```
 
+---
 ### Simply use the validation you want:
 
 **Kotlin**
@@ -34,6 +42,28 @@ new AlphabetValidation().isValid("abc"); // returns true
 new AlphabetValidation().isValid("abc123"); // returns false
 ```
 
+---
+### Create your own validation!
+
+**Kotlin**
+```
+class YourValidation: Validation() {
+  override fun isValid(o: Any): Boolean {
+    // your logic here, check first for data type of parameter o
+  }
+}
+```
+**Java**
+```
+public class YourValidation extends Validation {
+  @Override
+  public boolean isValid(Object o) {
+    // your logic here, check first for data type of parameter o 
+  }
+}
+```
+
+---
 ### You can also combine multiple validations:
 
 **Kotlin**
