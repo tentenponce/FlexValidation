@@ -12,9 +12,9 @@ ext {
 
     publishedGroupId = "com.tcorner"
     artifact = "flexvalidation"
-    libraryVersion = "1.0.2"
+    libraryVersion = "1.0.3"
 
-    libraryDescription = "Simple, flexible, and extensible form validations"
+    libraryDescription = "Simple, flexible, and highly extensible form validations"
     siteUrl = "https://github.com/tentenponce/FlexValidation"
     gitUrl = "https://github.com/tentenponce/FlexValidation.git"
     developerId = "tentenponce"
@@ -34,8 +34,8 @@ dependencies {
 }
 
 if (project.rootProject.file('local.properties').exists()) {
-    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/tentenponce/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/tentenponce/JCenter/master/bintrayv1.gradle'
 }
 
 jacocoTestReport {
