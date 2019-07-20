@@ -1,6 +1,10 @@
 language: java
 jdk: oraclejdk8
 
+env:
+  - bintray.user=$BINTRAY_USER
+  - bintray.apikey=$BINTRAY_APIKEY
+
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 
