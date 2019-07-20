@@ -19,7 +19,7 @@ script:
 
 deploy:
   provider: script
-  script: ./gradlew bintrayUpload
+  script: ./gradlew clean build bintrayUpload
   skip_cleanup: true
   dry-run: false
   on:
