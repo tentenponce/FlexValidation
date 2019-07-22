@@ -10,7 +10,7 @@ Simple, flexible, and highly extensible form validations.
 - Can be easily plugged into your project no matter what architecture you are using.
 - Highly extensible, create your own validations!
 - Just exactly what you need, pure validation classes only.
-- Less than 25KB!!!
+- Less than 30KB!!!
 - Complete documentation and tests.
 
 ---
