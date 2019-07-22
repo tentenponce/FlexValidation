@@ -34,7 +34,7 @@ dependencies {
 }
 
 apply from: 'https://raw.githubusercontent.com/tentenponce/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/tentenponce/JCenter/bugfix/publish/bintrayv1.gradle'
+apply from: 'https://raw.githubusercontent.com/tentenponce/JCenter/master/bintrayv1.gradle'
 
 jacocoTestReport {
     reports {
